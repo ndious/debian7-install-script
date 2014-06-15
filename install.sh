@@ -1,6 +1,6 @@
 echo "update and install basics software"
 apt-get update
-apt-get install vim curl python g++ make checkinstall build-essential python-software-properties
+apt-get install -y vim curl python g++ make checkinstall build-essential python-software-properties htop
 
 echo "Add customs sources list"
 echo "\n# nginx repositories\n" >> /etc/apt/sources.list
@@ -22,7 +22,7 @@ add-apt-repository 'deb http://ftp.igh.cnrs.fr/pub/mariadb/repo/10.0/debian whee
 
 echo "install varnish nginx docker mariadb"
 apt-get update
-apt-get install varnish nginx lxc-docker mariadb-server mariadb-client
+apt-get install -y varnish nginx lxc-docker mariadb-server mariadb-client
 
 echo "install nodejs & npm"
 mkdir ~/node_js_src && cd $_
@@ -41,4 +41,4 @@ echo "install node global libraries"
 npm install -g vtop grunt-cli
 
 echo "Install php as cli"
-apt-get install php5-cli php5-curl php5-mysql
+apt-get install -y php5-cli php5-curl php5-mysql
