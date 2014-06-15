@@ -24,7 +24,7 @@ add-apt-repository 'deb http://ftp.igh.cnrs.fr/pub/mariadb/repo/10.0/debian whee
 
 echo "install varnish nginx docker mariadb"
 apt-get update
-apt-get install -y varnish nginx lxc-docker mariadb-server mariadb-client
+apt-get install -y --force-yes varnish nginx lxc-docker mariadb-server mariadb-client
 
 echo "install nodejs & npm"
 mkdir ~/node_js_src && cd $_
