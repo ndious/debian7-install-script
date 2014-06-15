@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo "update and install basics software"
 apt-get update
 apt-get install -y vim curl python g++ make checkinstall build-essential python-software-properties htop
